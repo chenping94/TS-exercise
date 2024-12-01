@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./build/src/index",
-    "build": "npx tsc --project ./",
+    "start": "npm run build && node ./build/src/index",
+    "build": "tsc",
+    "watch": "tsc -w",
     "build:watch": "npx tsc --project ./ -w",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix"
@@ -14,7 +15,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.x"
+    "express": "^4.21.1",
+    "node": "^20.18.1"
   },
   "devDependencies": {
     "@types/express": "^4.x",
