@@ -1,0 +1,27 @@
+format = " $all"
+command_timeout = 3000
+add_newline = true
+
+[username]
+style_root = "magenta bold"
+style_user = "green bold"
+format = "[$user]($style)"
+show_always = true
+
+[hostname]
+format = "[@$hostname](bold green) "
+ssh_only = false
+
+[git_metrics]
+only_nonzero_diffs = true
+disabled = false
+
+[cmd_duration]
+format = '[祥$duration ]($style)'
+
+[status]
+style = "bg:blue"
+symbol = ""
+format = '[\[$symbol $common_meaning $signal_name ($int)\]]($style) '
+map_symbol = true
+disabled = false
